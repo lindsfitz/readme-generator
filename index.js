@@ -8,9 +8,8 @@
 // If there is no license, return an empty string
 
 // TODO: Create a function to generate markdown for README
-
+const genMD = require('./utils/generateMarkdown');
 const fs = require('fs');
-const fsPromises = require('fs').promises;
 const inquirer = require('inquirer');
 
 inquirer
@@ -38,7 +37,7 @@ inquirer
         {
             type: 'list',
             message: 'Choose the license for this application',
-            choices: ['MIT'],
+            choices: ['MIT','Mozilla','Apache','GPLv2','None'],
             name: 'license',
         },
         {
@@ -63,45 +62,5 @@ inquirer
         },
     ])
     .then((response) =>
-        fsPromises.writeFile(`README.md`,
-        `# ${response.title}
-
-        ## Description
-            ${response.description}
-
-        ![badge](${licenselink})
-
-        ## Table of Contents 
-            * [Installation](#installation)
-            * [Usage](#usage)
-            * [Questions](#questions)
-            * [License](#license)
-        
-        ## Installation
-
-            **Follow these steps to properly install this application:**
-
-            ${response.install}
-
-        ## Usage
-            **How to use this application:**
-            ${response.usage}
-
-        ## License
-            
-
-        ## Contributors
-            ${response.contributors}
-
-        ## Questions
-            **For any additional questions or feedback about this application**
-            Feel free to reach out via email or contact me on Github:
-
-            Email:
-            [${response.email}](mailto:${response.email})
-
-            Github:
-            [${response.github}](https://github.com/${response.github})
-        
-        `, error => error ? console.log(error) : console.log('Your README has been created!'))
+        fs.writeFile(`README.md`,genMD(response), error => error ? console.log(error) : console.log('Your README has been created!'))
     );
