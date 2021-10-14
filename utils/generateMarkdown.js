@@ -75,7 +75,7 @@ function generateMarkdown(response) {
   ${response.contributors}
 
   ## Questions
-  
+
   *For any additional questions or feedback about this application:*
 
   Feel free to reach out via email or contact me on Github:

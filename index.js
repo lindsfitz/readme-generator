@@ -42,12 +42,12 @@ inquirer
         },
         {
             type: 'input',
-            message: 'Please enter any contribution data.',
+            message: 'Please enter any contribution data. If not applicable, response with N/A.',
             name: 'contributors',
         },
         {
             type: 'input',
-            message: 'Tests?',
+            message: 'Please enter testing details. If not applicable, respond with N/A.',
             name: 'tests',
         },
         {
@@ -62,5 +62,5 @@ inquirer
         },
     ])
     .then((response) =>
-        fs.writeFile(`README.md`,genMD(response), error => error ? console.log(error) : console.log('Your README has been created!'))
+        fs.writeFile(`README1.md`,genMD(response), error => error ? console.log(error) : console.log('Your README has been created!'))
     );

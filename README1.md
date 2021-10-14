@@ -1,13 +1,9 @@
-# ReadMe Generator
-  
+# Example Repository
+
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Description
- This application uses the command line interface to prompt the user to answer a series of questions about a Github repository and generates a README.md file based on user input. 
-
- ## Mock Up Video
-
- [Screencastify Video Link](https://drive.google.com/file/d/1LFb6E5Cb-PBJevILCfDS-mnuRs6CmGgX/view)
+ This is to show the functionality of the ReadMe Generator.
 
 
   ## Table of Contents 
@@ -20,12 +16,13 @@
 
   *Follow these steps to properly install this application:*
 
-  To properly install this application, you will need to download the npm Inquirer package and require the fs dependencies in your CLI.
+  You will need to install node.js and inquirer for this application.
 
   ## Usage
-  *How to use this application:*
 
-  In your CLI, you will need to run the command 'node index.js'. After this, answer the series of prompts and a README will automatically be generated based on user responses.
+  **How to use this application:**
+
+  Enter 'node index.js' into the CLI and then follow the prompts.
 
   ## License
 
@@ -34,9 +31,11 @@
       
 
   ## Contributors
+
   N/A
 
   ## Questions
+
   *For any additional questions or feedback about this application:*
 
   Feel free to reach out via email or contact me on Github:
