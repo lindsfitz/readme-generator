@@ -62,5 +62,5 @@ inquirer
         },
     ])
     .then((response) =>
-        fs.writeFile(`README1.md`,genMD(response), error => error ? console.log(error) : console.log('Your README has been created!'))
+        fs.writeFile(`README2.md`,genMD(response), error => error ? console.log(error) : console.log('Your README has been created!'))
     );
